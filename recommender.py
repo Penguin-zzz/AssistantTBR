@@ -24,7 +24,7 @@ genre = st.text_input("Enter a genre: ")
 theme = st.text_input("Enter a theme you want to explore: ")
 
 if st.button("Recommend!"):
-    books = load_books("data/owned_books.txt")
+    books = load_books("owned_books.txt")
     books_list = "\n".join(f"- {book}" for book in books) if books else "Nothing Listed"
 
     messages = [
